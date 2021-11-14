@@ -119,7 +119,6 @@ function soundAllowed() {
 }
 
 
-navigator.mediaDevices.getUserMedia({ audio: true }).then(handleSuccess)
 
 //Define vars to hold time values
 let seconds = 0;
@@ -191,7 +190,6 @@ const  startStop = () => {
         interval = window.setInterval(stopWatch, 1000);
         document.getElementById("startStop").innerHTML = "Stop";
         possition = "started";
-
     }
     else {
 
@@ -202,4 +200,5 @@ const  startStop = () => {
     }
 
 }
+
 
