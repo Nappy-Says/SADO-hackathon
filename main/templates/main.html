@@ -1,0 +1,143 @@
+{% extends 'base.html' %} {% load static %} {% block imports %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}"> {% endblock %} {% block content %}
+<div class="title">
+    <h1>Садо</h1>
+    <p class="desc">Проект по
+        <blue>обучению</blue> машин понимания <br> речи на таджикском языке</p>
+</div>
+
+<div class="title">
+    <h2>Зарабатывайте деньги записывая свой голос или проверяя чужие записи</h2>
+</div>
+
+<div class="Listen-and-record">
+    <div class="record-block">
+        <div class="circles">
+            <div class="imgBlock">
+                <img src="{% static 'img/Group.svg'%}" class="asd">
+            </div>
+        </div>
+        <span class="text">Записав свой голос, вы помогаете улучшить систему по распознанию таджикской речи</span>
+        <br>
+        <br>
+    </div>
+
+    <hr>
+
+    <div class="record-block">
+        <div class="circles">
+            <div class='imgBlock'>
+                <img src="{% static 'img/Group2.svg'%}" class="asd">
+            </div>
+        </div>
+        <span class="text"> Послушайте и оцените правильность записанных текстов</span>
+    </div>
+</div>
+
+<div class="how-we-do">
+    <div class="bag">
+        <div class="visible">
+            <img src="{% static 'img/check-circle.svg' %}">
+            <p class="card-title">Что мы делаем?</p>
+            <p class="card-text">Мы строим открытую базу данных голосов на таджикском языке, чтобы все желающие могли использовать ее для разработки голосовых приложений</p>
+        </div>
+        <div class="visible">
+            <img src="{% static 'img/Group3.svg' %}">
+            <p class="card-title">Что мы делаем?</p>
+            <p class="card-text">Мы верим в то, что большая открытая база голосов поможет развитию и инновациям в Таджикистане в сфере разработки приложений с использованием разпознавания речи</p>
+        </div>
+        <div class="visible">
+            <img src="{% static 'img/Group4.svg' %}">
+            <p class="card-title">Как помочь?</p>
+            <p class="card-text">Запишите свой голос зачитав одно предложения и помогите машинам понимать человеческую речь. Проверяйте работу других, чтобы улучшить качество</p>
+        </div>
+    </div>
+</div>
+
+<div class="ewq">
+    <img src="{% static 'img/Rectangle.svg' %}" class='qwe'>
+    <img src="{% static 'img/Rectangle2.svg' %} " class='qwe2'>
+    <div class="work-block">
+        <h1>Как это работает?</h1>
+        <p class="just-text">Мы хотим построить открытую базу общими усилиями. Сделайте свой вклад записав свой голос или проверив записи других. Это сделает базу лучше для всех</p>
+    </div>
+    <div class="example">
+        <div class="example-block">
+            <img class="size" src="{% static 'img/Group5.svg' %}">
+            <p class="card-title">Записывайте</p>
+            <span class="card-text2">Пользователи записывают свои голоса прочитав текс, который мы им показываем</span>
+        </div>
+        <img src="{% static 'img/Group8.svg' %}" class="arrow">
+        <div class="example-block">
+            <img class="size" src="{% static 'img/Group9.svg' %}">
+            <p class="card-title">Очередь на проверку</p>
+            <span class="card-text2">Запись попадает на очередь и будет ждать проверки</span>
+        </div>
+        <img src="{% static 'img/Group8.svg' %}" class="arrow2">
+        <div class="example-block">
+            <img class="size" src="{% static 'img/Group10.svg' %}">
+            <p class="card-title">Проверка</p>
+            <span class="card-text2">Пользователи слушают записи, сверяют с тексом</span>
+        </div>
+        <img src="{% static 'img/Group8.svg' %}" class="arrow3">
+        <div class="example-block">
+            <img class="size" src="{% static 'img/Group11.svg' %}">
+            <p class="card-title">Достоверность</p>
+            <span class="card-text2">Запись становится достоверной если пользователи проголосовали за нее “Правильно”</span>
+        </div>
+        <img src="{% static 'img/Group8.svg'%}" class="arrow4">
+        <img src="{% static 'img/Group8.svg' %}" class="arrow5">
+    </div>
+    <div class="tworouds">
+        <div class="example-block2">
+            <img class="size" src="{% static 'img/Group12.svg' %}">
+            <p class="card-title">“Правильно”</p>
+            <span class="card-text2">Чтобы попасть в базу данных запись должна получить 2 голоса “Правильно” от двух разных пользователей  </span>
+        </div>
+        <img src="{% static 'img/Group8.svg' %}" class="arrow6">
+        <img src="{% static 'img/Group8.svg' %}" class="arrow7">
+        <div class="example-block2">
+            <img class="size rotate" src="{% static 'img/Group12.svg' %}">
+            <p class="card-title">“Не правильно”</p>
+            <span class="card-text2">Если пользователь проголосует за запись “Не правильно”, то она попадет обратно в очередь. После повторного отрицания, запись попадает на кладбище записей</span>
+        </div>
+    </div>
+    <div class="tworouds">
+        <div class="example-block2">
+            <img class="size" src="{% static 'img/Group11.svg' %}">
+            <p class="card-title">Достоверность</p>
+            <span class="card-text2">Запись становится достоверной если пользователи проголосовали за нее “Правильно”</span>
+        </div>
+        <div class="example-block2">
+            <img class="size" src="{% static 'img/Group11.svg' %}">
+            <p class="card-title">Достоверность</p>
+            <span class="card-text2">Запись становится достоверной если пользователи проголосовали за нее “Правильно”</span>
+        </div>
+    </div>
+
+    <div class="help-block">
+        <h1>Помогите нам сделать <br> данные качественными</h1>
+        <p class="just-text"> Создайте себе аккаунт, следите за своим прогрессом и получайте медали. Все ваши данные анонимны. Мы делимся только агрегированной статистикой по всему проекту</p>
+    </div>
+    <div class="how-we-do">
+        <div class="bag">
+            <div class="visible2">
+                <img src="{% static 'img/Group13.svg' %}">
+                <p class="card-title">Демографические данные и акцент</p>
+
+            </div>
+            <div class="visible2">
+                <img src="{% static 'img/Group3.svg' %}">
+                <p class="card-title">Следите за своим прогрессом и сравгивайье его с другими</p>
+
+            </div>
+            <div class="visible2">
+                <img src="{% static 'img/Group4.svg' %}">
+                <p class="card-title">Оставьте свою почту и получайте новости о нашем проекте </p>
+
+            </div>
+        </div>``
+    </div>
+</div>
+
+{% endblock %}

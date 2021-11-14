@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block imports %}
+    <script src="https://unpkg.com/wavesurfer.js "></script>
+    <script src="{% static 'js/estimate.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock  %}
+
+
+
+{% block content %}}
+<div class="top-panel">
+    <div class="top-panel-left">
+        <a class="link" href="/"><img src="{% static 'img/Back.svg' %}" class="arrowBlack"></a>
+        <div class="top-panel-mini-block">
+            <p class="after2"><a class="link" href="/contribute">Записать</a></p>
+
+            <p class="active after">Оценить</p>
+            <div class="hr"></div>
+
+        </div>
+    </div>
+</div>
+
+<div class="main-panel">
+    <img src="{% static 'img/Group8.svg'%}" class="left" alt="">
+    <div class="text-blocks">
+        <p class="texth1">Бархез, ки пуркунем паймона зи май Зон пеш ки пуркунанд паймонаи мо</p>
+    </div>
+    <img src="{% static 'img/Group8.svg'%}" " class="right " alt=" ">
+            </div>
+
+
+
+            <div class="audio-container ">
+                
+                <div id="dispay " class="timer ">00:00:00</div>
+                
+               <div class="audio ">
+
+               </div>
+                <div class="buttons ">
+                    <span class = "play-btn ">
+                        <div id="recording "  class="recording-wrap ">
+                            <img   id = "сhange " src="{% static 'img/play.svg' %} " class="size2 " onclick='changeImage(this);'>
+                        </div>
+                        </span>
+                </div>
+                <div class="title ">
+                Текст правильно прочтен?
+                </div>
+                
+                <div class="estimate ">
+                    <div class = "button ">
+                    <img class =  "sizedbox " src = {% static 'img/dislike.svg'%}/>
+                    <div class="like "> нет </div>
+                    </div>
+                    <div class = "button ">
+                    <img class =  "sizedbox " src = {% static 'img/like.svg'%}/>
+                    <div class="like "> Да </div>
+                    </div>
+                </div>
+                <div class="line-container1 ">
+                    <div class="vertical-line1 "></div>
+                    <div class="dot1 "></div>
+                    <div class="dot1 "></div>
+                </div>
+
+
+{% endblock %}

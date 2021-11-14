@@ -1,0 +1,97 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+
+{% block imports %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/charts.css' %}">
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-calendar.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+{% endblock %} 
+
+
+{% block content %}
+    <div class="main">
+        <div class="left_block">
+            <div class="header">
+                <div class="header_title">
+                    Моя информация
+                </div>
+                <div class="header_link_for_change">
+                    Редактировать
+                </div>
+            </div>
+            <div class="divider"></div>
+
+            <div class="info">
+                <div class="info_desc">
+                    ФИО
+                </div>
+                <div class="info_val">
+                    Хорун Улугзода
+                </div>
+
+                <div class="info_desc">
+                    Электронная Почта
+                </div>
+                <div class="info_val">
+                    Horun@tcell.com
+                </div>
+
+                <div class="info_desc">
+                    Возраст
+                </div>
+                <div class="info_val">
+                    25
+                </div>
+
+                <div class="info_desc">
+                    Пол
+                </div>
+                <div class="info_val">
+                    Мужской
+                </div>
+
+                <div class="info_desc">
+                    Город проживания
+                </div>
+                <div class="info_val">
+                    Душанбе
+                </div>
+
+                <div class="info_desc">
+                    Диалект
+                </div>
+                <div class="info_val">
+                    -
+                </div>
+
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="right_upper">
+                <div class="header">
+                    <div class="header_title">
+                        Моя информация
+                    </div>
+                </div>
+                <div class="divider2"></div>
+
+                <div class="chart">
+                    <canvas id="MultiBarChart"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="{% static 'js/personal_area_chart.js' %}"></script>
+
+    
+{% endblock content %}

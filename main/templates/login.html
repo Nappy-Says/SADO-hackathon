@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paymona Sado</title>
+</head>
+
+<body>
+    <div class="root">
+        <div class="container">
+            <div class="header">
+                <div class="logoBlock">
+                    <img src="{% static 'img/logo.svg'%}" class="logo" alt="">
+                    <p class='textLogo'><a class='link' href="/">Paymona</a></p>
+                </div>
+
+                <div class="menu">
+                    <div class="items"><a class='link' href="/contribute">Сделайте вклад</a></div>
+                    <div class="items"><a class='link' href="/database">База данных</a></div>
+                    <div class="items border"><a class='link' href="/login">Войти</a></div>
+                </div>
+
+            </div>
+
+            <div class="elips">
+                <svg width="120" height="285" viewBox="0 0 120 285" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M285 -1.24577e-05C247.573 -1.08218e-05 210.513 7.37176 175.935 21.6943C141.357 36.0169 109.939 57.0099 83.4745 83.4746C57.0098 109.939 36.0169 141.357 21.6943 175.935C7.37172 210.513 -1.57297e-05 247.573 -1.24577e-05 285L285 285L285 -1.24577e-05Z" fill="#1D214E"/>
+                </svg>
+            </div>
+
+            <div class="rectangle2">
+                <svg width="79" height="365" viewBox="0 0 79 365" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="118.426" height="472.716" rx="59.2128" transform="matrix(0.716507 0.69758 -0.716507 0.69758 18.7041 -24)" fill="#1D214E"/>
+                </svg>
+            </div>
+
+            <div class="rectangle">
+                <svg width="95" height="365" viewBox="0 0 95 365" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="118.426" height="472.716" rx="59.2128" transform="matrix(0.716507 0.69758 -0.716507 0.69758 34.7041 -24)" fill="#1D214E"/>
+                </svg>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="box1">
+        <div class="menu mb-20">
+            <h2>Регистрация</h2>
+            <a class="link:active" href="/login">
+                <h2 class="after2">Вход</h2>
+            </a>
+        </div>
+
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="login">
+
+                <div class="mb-40">
+                    <label class="label_1" for="">Электронная почта</label>
+                    <input name="email" class="input_1" type="text" placeholder="example@paymona.com">
+                </div>
+
+                <div>
+                    <label class="label_1" for="">Пароль</label>
+                    <input name="password" class="input_1" type="password" placeholder="••••••••••••">
+                </div>
+
+            </div>
+
+            <label style="color: red; margin-left: 20px;" for="">{{error}}</label>
+
+            <div class="mt-20 temp">
+                <div class="temp_1">
+                    <img src="{% static 'img/Facebook.svg' width=" 24 " %}">
+                    <label class="" for="">Войти с помощью Facebook</label>
+                </div>
+
+                <div>
+                    <button type="submit" style="height: 54px;width: 131px;left: 390px;top: 1px;border-radius: 50px;padding: 12px, 32px, 12px, 32px;background: #03C2EC;position: static;font-family: Source Sans Pro;font-style: normal;font-weight: 600;font-size: 24px;line-height: 30px;color: #FFFFFF;flex: none;order: 1;flex-grow: 0; cursor: pointer;">
+                    Войти
+                </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

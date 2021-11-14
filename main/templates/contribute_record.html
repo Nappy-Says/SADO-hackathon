@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {% load static %} {% block imports %}
+<link rel="stylesheet" href="{% static 'css/record.css' %}">
+
+<script src="{% static 'js/jj.js' %}"></script>
+
+
+{% endblock %} {% block content %}
+<div class="top-panel">
+    <div class="top-panel-left">
+        <a class="link" href="/"> <img src="{% static 'img/back.svg' %}" class="arrowBlack"> </a>
+        <div class="top-panel-mini-block">
+            <p class="active after">Записать</p>
+            <p class="after2">
+
+                <a class='link' href="/estimate">Оценить</a>
+                <div class="hr"></div>
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<div class="main-panel">
+    <img src="{% static 'img/Group8.svg' %}" class="left" alt="">
+    <div class="text-blocks">
+        <p class="texth1">Бархез, ки пуркунем паймона зи май Зон пеш ки пуркунанд паймонаи мо</p>
+    </div>
+    <img src="{% static 'img/Group8.svg' %}" style="  transform: rotate(270deg);" alt="">
+</div>
+
+
+
+<div class="recording-block">
+
+    <div id="dispay" class="timer">00:00:00</div>
+
+    <div style="margin-bottom: 15vh;">
+
+        <div class="line-container1">
+            <div class="vertical-line1"></div>
+            <div class="dot1"></div>
+            <div class="dot1"></div>
+        </div>
+
+        <canvas id="canvas" width=300 height=100></canvas>
+
+        <!-- {% comment %} <canvas id="canvas" style="width: 453px; height: 146.71429999999998px !important; position: absolute; top: 62vh;left: 50%;transform: rotate(180deg);"></canvas> {% endcomment %} -->
+    </div>
+
+
+    <div id="record" onclick="Recording()" class="recording-wrap">
+        <img src="{% static 'img/Group.svg'%}" class="size2">
+    </div>
+
+    <div id="stop" onclick="StopRecording()" class="recording-wrap2">
+        <img src="{% static 'img/Group3.svg'%}" class="size2">
+        <div class="rect"></div>
+    </div>
+
+
+</div>
+
+<script>
+    let stop = document.getElementById('stop')
+    let record = document.getElementById('record')
+
+    const Recording = () => {
+        record.style.display = 'none'
+        stop.style.display = 'flex'
+    }
+
+    const StopRecording = () => {
+        record.style.display = 'flex'
+        stop.style.display = 'none'
+    }
+</script>
+
+{% endblock %}

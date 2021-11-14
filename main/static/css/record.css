@@ -1,0 +1,36 @@
+.recording-block {
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recording-wrap {
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.04);
+    border-radius: 50%;
+    padding: 17px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recording-wrap2 {
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.04);
+    border-radius: 50%;
+    padding: 27px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.canva {
+    width: 463px;
+    height: 155.71429999999998px;
+    position: absolute;
+    top: 62vh;
+    left: 50%;
+    transform: rotate(180deg);
+}
