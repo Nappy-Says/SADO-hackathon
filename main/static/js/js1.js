@@ -76,6 +76,9 @@ function draw() {
 
 const handleSuccess = function (stream) {
 
+
+    const downloadLink = document.getElementById('download');
+    const stopButton = document.getElementById('stop');
     const mediaRecorder = new MediaRecorder(stream, options);
     var AudioContext = (window.AudioContext || window.webkitAudioContext)
     var audioContent = new AudioContext();
@@ -90,8 +93,7 @@ const handleSuccess = function (stream) {
 
     mediaRecorder.addEventListener('stop', function () {
         downloadLink.href = URL.createObjectURL(new Blob(recordedChunks));
-        downloadLink.download = 'acetest.wav';
-        timeOffset = -1
+        downloadLink.download = 'acetest.wav'
     });
 
     stopButton.addEventListener('click', function () {
